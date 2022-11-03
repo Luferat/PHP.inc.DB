@@ -25,7 +25,7 @@ $copyright = "&copy; {$site_year} ";        // Mensagem de Copyright no rodapé:
  * Se no endereço do site temos a palavra 'localhost', provavelmente estamos
  * usando o XAMPP...
  **/
-if (strpos($_SERVER['SERVER_NAME'], 'localhost') === false) :
+if (strpos($_SERVER['SERVER_NAME'], 'localhost') >= 0) :
 
     // Configurações de acesso ao banco de dados usando o XAMPP:
     $hostname = 'localhost';    // Endereço do servidor MySQL:
