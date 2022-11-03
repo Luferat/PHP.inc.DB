@@ -38,6 +38,6 @@ HTML;
  * Todo o código PHP desta página termina aqui! *
  ************************************************/
 
-// Importa template da página:
+// Importa template da página e a exibe:
 require($_SERVER['DOCUMENT_ROOT'] . '/inc/_template.php');
 ?>
