@@ -6,8 +6,8 @@ Modelo de site dinâmico usando PHP estruturado e template.
 ## Atividade Prática  
 ### Construção de Site Dinâmico
 
-> IMPORTANTE!
-> Esta atividade pode ser desenvolvida individualmente ou em equipes de até 3 (três) integrantes.
+> **IMPORTANTE!**
+> *Esta atividade pode ser desenvolvida individualmente ou em equipes de até 3 (três) integrantes.*
 
 #### Objetivos
 Concluir a construção de um site dinâmico, onde o sistema de navegação já está funcional, faltando apenas desenvolver os componentes das páginas, o design e o conteúdo conforme o assunto escolhido pelo estudante.
