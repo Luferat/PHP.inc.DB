@@ -13,9 +13,9 @@ $author_articles = '';
 // Obtém o ID da URL:
 $id = intval($_SERVER['QUERY_STRING']);
 
-// Verifica se o ID é igual a 0
+// Seo ID é igual a 0 (zero)...
 if ($id == 0)
-    // Se for, carrega página 404:
+    // Carrega página 404:
     header('Location: /404/');
 
 // Escreve o SQL que obtém o artigo:
@@ -35,9 +35,9 @@ SQL;
 // Executa o SQL:
 $res = $conn->query($sql);
 
-// Verifica se o artigo existe:
+// Se o artigo não existe...
 if ($res->num_rows != 1)
-    // Se não existe, carrega página 404 e encerra o programa:
+    // Carrega página 404 e encerra o programa:
     header('Location: /404/');
 
 // Extrai os dados do artigo:
@@ -57,10 +57,10 @@ LIMIT 5;                          -- Obtém no máximo 5 artigos:
 
 SQL;
 
-// Extrai a lista de artigos do autor:
+// Extrai os artigos do autor:
 $res = $conn->query($sql);
 
-// Se tem artigos do autor:
+// Se tem outros artigos do autor:
 if ($res->num_rows > 0) :
 
     // Inicializa a lista de artigos do autor:
@@ -69,7 +69,7 @@ if ($res->num_rows > 0) :
     // Loop para obter cada um dos artigos:
     while ($aart = $res->fetch_assoc()) :
 
-        // Adiciona o artigo atula na lista:
+        // Adiciona o artigo atual na lista:
         $author_articles .= "<li><a href=\"/view/?{$aart['aid']}'\">{$aart['title']}</a></li>";
 
     endwhile;

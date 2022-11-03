@@ -9,7 +9,7 @@ else                                        // Se definiu um título...
     $tag_title .= " ·:· " . $page_title;    // O título recebe o título definido:
 
 /**
- * Mensagem de 'Copyright'no rodapé:
+ * Processa mensagem de 'Copyright' → Tag <footer>...</footer>:
  **/
 $ytoday = intval(date('Y'));                // Obtém o ano atual:
 if ($ytoday > $site_year)                   // Se o ano atual é maior do que o ano do site...

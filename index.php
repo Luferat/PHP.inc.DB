@@ -14,15 +14,15 @@ $page_title = '';
 $content = '<h2>Artigos Recentes</h2>';
 
 // query para obter todos os artigos do site:
-$sql = "
+$sql = <<<SQL
 
-SELECT aid, title, thumbnail, resume
-FROM articles
-    WHERE astatus = 'online'
-    AND adate <= NOW()
-ORDER by adate DESC
+SELECT aid, title, thumbnail, resume    -- Seleciona apenas os campos necessários:
+FROM articles                           -- Da tabela articles:
+    WHERE astatus = 'online'            -- Filtra pelo status 'online':
+    AND adate <= NOW()                  -- "E" pela data de publicação menor ou igua a data atual:
+ORDER by adate DESC                     -- Ordena pela data de publicação mais recente:
 
-";
+SQL;
 
 // Executa query e armazena em '$res':
 $res = $conn->query($sql);
@@ -53,6 +53,7 @@ else :
 
 HTML;
 
+    // Fim do loop dos artigos:
     endwhile;
 
 endif;
@@ -76,4 +77,3 @@ HTML;
 
 // Importa template da página:
 require($_SERVER['DOCUMENT_ROOT'] . '/inc/_template.php');
-?>
