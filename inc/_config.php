@@ -60,7 +60,12 @@ $conn->query('SET character_set_results=utf8');
 $conn->query('SET GLOBAL lc_time_names = pt_BR');
 $conn->query('SET lc_time_names = pt_BR');
 
-// Função de uso geral para DEBUG:
+/*******************************************************************
+ * Funções de uso geral                                            *
+ * Essas funções podem ser usadas em qualquer parte do aplicativo. *
+ *******************************************************************/
+
+// Função para DEBUG:
 function debug($variable, $exit = true, $dump = false)
 {
     echo '<pre>';
@@ -77,7 +82,7 @@ function debug($variable, $exit = true, $dump = false)
  *      dt_convert('2022-10-31', 'd/m/Y');
  *      dt_convert('31-10-2022', 'Y-m-d');
  *      dt_convert('31/10/2022 12:34:59', 'Y-m-d H:i');
- */
+ **/
 function dt_convert($date, $format = 'Y-m-d H:i:s')
 {
     $date = str_replace('/', '-', $date);
@@ -87,7 +92,7 @@ function dt_convert($date, $format = 'Y-m-d H:i:s')
 
 /**
  * Calcula a idade com base na data de nascimento, levando em consideração 
- * o ano, mês e dia de nascimento:
+ * o ano, mês e dia do nascimento:
  * OBS: a data deve estar no formado 'Y-m-d'.
  **/
 function agecalc($birth)
