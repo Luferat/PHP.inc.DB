@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+}
+
+#wrap>header {
+    color: white;
+}
+
+#wrap>nav {
+    border-top: 1px dotted grey;
+}
+
+#wrap>nav a {
+    color: #eee;
+}
+
+#wrap>nav a:hover {
+    background: #ddd;
+    color: #000;
+}
+
+#wrap>main {
+    border-top: 1px dotted grey;
+    border-bottom: 1px dotted grey;
+    color: white;
+}
+
+#wrap>main aside {
+    border-top: 3px dotted #ccc;
+}
+
+#wrap>main article>h2:first-child, #wrap>main aside>h3:first-child {
+    background-color: #888;
+    color: #eee;
+}
+
+#wrap>footer {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    #wrap>main aside {
+        border: none;
+        border-left: 3px dotted #ccc;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrap>main {
+        border: 1px dotted grey;
+    }
+}
+
+.artbox {
+    background-color: #666;
+}
+
+.artbox:hover {
+    background-color: #444;
+}

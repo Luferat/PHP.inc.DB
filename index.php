@@ -46,10 +46,12 @@ else :
         $content .= <<<HTML
 
 <div class="artbox" onclick="location.href='/view/?{$art['aid']}'">
-    <img src="{$art['thumbnail']}" alt="{$art['title']}">
-    <h3>{$art['title']}</h3>
-    <div>{$art['resume']}</div>
-</div>
+    <div class="artimg" style="background-image: url('{$art['thumbnail']}')" title="{$art['title']}"></div>
+    <div>
+        <h3 class="arttitle">{$art['title']}</h3>
+        <div class="artresume">{$art['resume']}</div>
+    </div>
+</div> 
 
 HTML;
 
@@ -66,7 +68,8 @@ $page_content = <<<HTML
 </article>
 
 <aside>
-    Conteúdo complementar...
+    <h3>Conteúdo complementar</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed et harum natus.</p>
 </aside>
 
 HTML;

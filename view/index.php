@@ -100,6 +100,7 @@ $page_content .= <<<HTML
 
 <aside>
 
+    <h3>+ Informações</h3>
     <div>
         <img src="{$art['photo']}" alt="{$art['name']}">
         <h3>{$art['name']}</h3>

@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+
+#wrap>nav {
+    border-top: 1px dotted grey;
+}
+
+#wrap>nav a {
+
+    color: #666;
+}
+
+#wrap>nav a:hover {
+    background: #ddd;
+    color: #000;
+}
+
+#wrap>main {
+    border-top: 1px dotted grey;
+    border-bottom: 1px dotted grey;
+}
+
+#wrap>main aside {
+    border-top: 3px dotted #ccc;
+}
+
+#wrap>main article>h2:first-child, #wrap>main aside>h3:first-child {
+    background-color: #eee;
+    color: #888;
+}
+
+@media (min-width: 768px) {
+    #wrap>main aside {
+        border: none;
+        border-left: 3px dotted #ccc;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrap>main {
+        border: 1px dotted grey;
+    }
+}
+
+.artbox {
+    background-color: #eee;
+}
+
+.artbox:hover {
+    background-color: #ddd;
+}
